@@ -1,6 +1,7 @@
 import 'package:first_app/counter.dart';
 import 'package:first_app/grid.dart';
 import 'package:first_app/home.dart';
+import 'package:first_app/input.dart';
 import 'package:first_app/list.dart';
 import 'package:flutter/material.dart';
 
@@ -66,6 +67,19 @@ class MenuPg extends StatelessWidget {
                 foregroundColor: Colors.white, // Text/Icon color
               ),
               child: Text("Grid View"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => InputWidget()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue, // Background color
+                foregroundColor: Colors.white, // Text/Icon color
+              ),
+              child: Text("Input"),
             ),
           ],
         ),

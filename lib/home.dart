@@ -28,7 +28,7 @@ class Homepage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        'Oeschinen Lake',
+                        'Reverend Insanity',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
