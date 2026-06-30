@@ -1,17 +1,22 @@
 import 'package:first_app/counter.dart';
 import 'package:first_app/grid.dart';
-import 'package:first_app/home.dart';
 import 'package:first_app/input.dart';
 import 'package:first_app/list.dart';
+import 'package:first_app/todo.dart';
 import 'package:flutter/material.dart';
+import 'package:first_app/home.dart';
 
-class MenuPg extends StatelessWidget {
-  const MenuPg({super.key});
+
+class MenuPage extends StatelessWidget {
+  const MenuPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Menu')),
+
+      appBar: AppBar(
+        title: Text('Menu'),
+      ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -23,24 +28,7 @@ class MenuPg extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => Homepage()),
                 );
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue, // Background color
-                foregroundColor: Colors.white, // Text/Icon color
-              ),
-              child: Text("Home"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CounterApp()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue, // Background color
-                foregroundColor: Colors.white, // Text/Icon color
-              ),
-              child: Text("Count"),
+              child: Text('Home'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -49,11 +37,7 @@ class MenuPg extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => ListViewExample()),
                 );
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue, // Background color
-                foregroundColor: Colors.white, // Text/Icon color
-              ),
-              child: Text("List View"),
+              child: Text('ListView Example Page'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -62,11 +46,16 @@ class MenuPg extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => Gridviewexample()),
                 );
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue, // Background color
-                foregroundColor: Colors.white, // Text/Icon color
-              ),
-              child: Text("Grid View"),
+              child: Text('GridView Example'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CounterApp()),
+                );
+              },
+              child: Text('Counter App Example'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -75,11 +64,16 @@ class MenuPg extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => InputWidget()),
                 );
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue, // Background color
-                foregroundColor: Colors.white, // Text/Icon color
-              ),
-              child: Text("Input"),
+              child: Text('Input Widgets Example'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TodoPage()),
+                );
+              },
+              child: Text('Assignment'),
             ),
           ],
         ),
@@ -87,3 +81,6 @@ class MenuPg extends StatelessWidget {
     );
   }
 }
+
+
+
