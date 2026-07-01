@@ -9,11 +9,10 @@ import 'package:first_app/home.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         title: Text('Menu'),
       ),
@@ -73,7 +72,7 @@ class MenuPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => TodoPage()),
                 );
               },
-              child: Text('Assignment'),
+              child: Text('ToDo'),
             ),
           ],
         ),
